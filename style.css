@@ -1,0 +1,375 @@
+ /* Общие стили */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: #f8faff;
+    color: #2d4059;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка сайта */
+header {
+    background: linear-gradient(135deg, #0056b3, #003366);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0, 51, 102, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #a8d8ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: white;
+    border-color: #a8d8ff;
+}
+
+/* Главный баннер */
+.hero {
+    background: linear-gradient(135deg, #0077cc, #004c99);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 35px;
+    opacity: 0.95;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff;
+    color: #0056b3;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 87, 179, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 87, 179, 0.3);
+}
+
+/* Слайдер с фактами */
+.slider-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #0056b3;
+    font-size: 2.2em;
+    font-weight: 600;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #0077cc;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.slider {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.08);
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+    min-width: 100%;
+    padding: 50px;
+    background: linear-gradient(145deg, #f8faff, #fff);
+    text-align: center;
+}
+
+.slide h3 {
+    margin-bottom: 25px;
+    color: #004c99;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.slide p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #4a4a4a;
+}
+
+.slider-nav {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.slider-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #d1e5ff;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+    background-color: #0077cc;
+    transform: scale(1.2);
+}
+
+/* Викторина */
+.quiz-section {
+    padding: 80px 0;
+    background-color: #f8faff;
+}
+
+.quiz-container {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.08);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.question {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #003366;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.options {
+    margin-bottom: 35px;
+}
+
+.option {
+    display: block;
+    background-color: #f5f9ff;
+    padding: 18px 25px;
+    margin: 15px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    font-size: 1.1em;
+}
+
+.option:hover {
+    background-color: #e6f1ff;
+    transform: translateX(10px);
+}
+
+.option.correct {
+    background-color: #e3fcef;
+    border-color: #00c853;
+    color: #007a3d;
+}
+
+.option.incorrect {
+    background-color: #ffebee;
+    border-color: #d32f2f;
+    color: #b71c1c;
+}
+
+.quiz-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.quiz-btn {
+    background: linear-gradient(135deg, #0077cc, #0056b3);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 87, 179, 0.2);
+}
+
+.quiz-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 87, 179, 0.3);
+}
+
+.result {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #0056b3;
+    margin: 30px 0;
+    text-align: center;
+    padding: 25px;
+    background: #f5f9ff;
+    border-radius: 15px;
+}
+
+/* Подвал сайта */
+footer {
+    background: #003366;
+    color: white;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.footer-column h3 {
+    margin-bottom: 25px;
+    color: #a8d8ff;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #cce7ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #1a4d80;
+    margin-top: 40px;
+    opacity: 0.8;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .slide {
+        padding: 30px 20px;
+    }
+
+    .quiz-container {
+        padding: 25px;
+    }
+
+    .question {
+        font-size: 1.2em;
+    }
+}
