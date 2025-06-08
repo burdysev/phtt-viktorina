@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина ПХТТ | Пермский химико-технологический техникум</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">ПХТТ<span>Викторина</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">О проекте</a></li>
+                    <li><a href="#facts">Факты</a></li>
+                    <li><a href="#quiz">Викторина</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="container">
+            <h1>Проверь свои знания о ПХТТ!</h1>
+            <p>Узнай интересные факты о Пермском химико-технологическом техникуме и пройди увлекательную викторину</p>
+            <a href="#quiz" class="btn">Начать викторину</a>
+        </div>
+    </section>
+
+    <!-- Слайдер с фактами -->
+    <section class="slider-section" id="facts">
+        <div class="container">
+            <h2 class="section-title">Интересные факты о ПХТТ</h2>
+            <div class="slider">
+                <div class="slider-container" id="slider-container">
+                    <div class="slide">
+                        <h3>История техникума</h3>
+                        <p>ПХТТ был основан в 1952 году и за свою историю подготовил тысячи специалистов</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Современные лаборатории</h3>
+                        <p>В техникуме есть оборудованные лаборатории, где студенты получают практические навыки работы.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Партнёры</h3>
+                        <p>ПХТТ сотрудничает с ведущими предприятиями Пермского края, включая "Галополимер" и "Сорбент".</p>
+                    </div>
+                </div>
+                <div class="slider-nav" id="slider-nav">
+                    <span class="slider-dot active"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Викторина -->
+    <section class="quiz-section" id="quiz">
+        <div class="container">
+            <h2 class="section-title">Викторина о ПХТТ</h2>
+            <div class="quiz-container">
+                <div id="quiz-content">
+                    <div class="question" id="question">Вопрос появится здесь</div>
+                    <div class="options" id="options"></div>
+                    <div class="quiz-controls">
+                        <button class="quiz-btn" id="restart-btn" style="display: none;">Начать заново</button>
+                        <button class="quiz-btn" id="next-btn">Следующий вопрос</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О техникуме</h3>
+                    <ul>
+                        <li><a href="https://phtt.ru" target="_blank">Официальный сайт ПХТТ</a></li>
+                        <li><a href="#">История</a></li>
+                        <li><a href="#">Специальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Адрес: Ласьвинская ул., 6</li>
+                        <li>Телефон: +7 (342) 252-52-29</li>
+                        <li>Email: info@phtt.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Разработчик</h3>
+                    <ul>
+                        <li>Индивидуальный проект</li>
+                        <li>Студент ПХТТ</li>
+                        <li>2025 год</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Викторина о ПХТТ. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
